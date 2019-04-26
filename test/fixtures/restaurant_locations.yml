@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  restaurant_branch_id: 1
+  address_line1: MyText
+  address_line2: MyText
+  city: MyString
+  state: MyString
+  country: MyString
+  postal_code: MyString
+  status: 1
+  creator_id: 1
+  modifier_id: 1
+  create_time: 2019-04-25 22:20:54
+  modified_time: 2019-04-25 22:20:54
+
+two:
+  restaurant_branch_id: 1
+  address_line1: MyText
+  address_line2: MyText
+  city: MyString
+  state: MyString
+  country: MyString
+  postal_code: MyString
+  status: 1
+  creator_id: 1
+  modifier_id: 1
+  create_time: 2019-04-25 22:20:54
+  modified_time: 2019-04-25 22:20:54

@@ -1,0 +1,51 @@
+<div class="page-header">
+  <%= link_to new_restaurant_branch_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Restaurant branch
+  <% end %>
+  <h1>Listing restaurant_branches</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Brand logo url</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Restaurant</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Creator</th>
+            <th>Modifier</th>
+            <th>Create time</th>
+            <th>Modified time</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @restaurant_branches) do |restaurant_branch| %>
+            <td><%= restaurant_branch.name %></td>
+            <td><%= restaurant_branch.description %></td>
+            <td><%= restaurant_branch.brand_logo_url %></td>
+            <td><%= restaurant_branch.phone %></td>
+            <td><%= restaurant_branch.email %></td>
+            <td><%= restaurant_branch.restaurant_id %></td>
+            <td><%= restaurant_branch.location_id %></td>
+            <td><%= restaurant_branch.status %></td>
+            <td><%= restaurant_branch.creator_id %></td>
+            <td><%= restaurant_branch.modifier_id %></td>
+            <td><%= restaurant_branch.create_time %></td>
+            <td><%= restaurant_branch.modified_time %></td>
+            <td><%= link_to 'Show', restaurant_branch %></td>
+        <td><%= link_to 'Edit', edit_restaurant_branch_path(restaurant_branch) %></td>
+        <td><%= link_to 'Destroy', restaurant_branch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to restaurant_floor_plans_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_restaurant_floor_plan_path(@restaurant_floor_plan), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show restaurant_floor_plan</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Restaurant:</dt>
+  <dd><%= @restaurant_floor_plan.restaurant_id %></dd>
+
+  <dt>Type:</dt>
+  <dd><%= @restaurant_floor_plan.type %></dd>
+
+  <dt>Status:</dt>
+  <dd><%= @restaurant_floor_plan.status %></dd>
+
+  <dt>Creator:</dt>
+  <dd><%= @restaurant_floor_plan.creator_id %></dd>
+
+  <dt>Modifier:</dt>
+  <dd><%= @restaurant_floor_plan.modifier_id %></dd>
+
+  <dt>Create time:</dt>
+  <dd><%= @restaurant_floor_plan.create_time %></dd>
+
+  <dt>Modified time:</dt>
+  <dd><%= @restaurant_floor_plan.modified_time %></dd>
+
+</dl>

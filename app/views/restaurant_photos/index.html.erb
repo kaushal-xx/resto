@@ -1,0 +1,47 @@
+<div class="page-header">
+  <%= link_to new_restaurant_photo_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Restaurant photo
+  <% end %>
+  <h1>Listing restaurant_photos</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Url</th>
+            <th>Restaurant</th>
+            <th>Photo type</th>
+            <th>Status</th>
+            <th>Creator</th>
+            <th>Modifier</th>
+            <th>Create time</th>
+            <th>Modified time</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @restaurant_photos) do |restaurant_photo| %>
+            <td><%= restaurant_photo.name %></td>
+            <td><%= restaurant_photo.description %></td>
+            <td><%= restaurant_photo.url %></td>
+            <td><%= restaurant_photo.restaurant_id %></td>
+            <td><%= restaurant_photo.photo_type %></td>
+            <td><%= restaurant_photo.status %></td>
+            <td><%= restaurant_photo.creator_id %></td>
+            <td><%= restaurant_photo.modifier_id %></td>
+            <td><%= restaurant_photo.create_time %></td>
+            <td><%= restaurant_photo.modified_time %></td>
+            <td><%= link_to 'Show', restaurant_photo %></td>
+        <td><%= link_to 'Edit', edit_restaurant_photo_path(restaurant_photo) %></td>
+        <td><%= link_to 'Destroy', restaurant_photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

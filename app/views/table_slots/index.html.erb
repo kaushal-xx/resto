@@ -1,0 +1,39 @@
+<div class="page-header">
+  <%= link_to new_table_slot_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Table slot
+  <% end %>
+  <h1>Listing table_slots</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Table</th>
+            <th>Status</th>
+            <th>Creator</th>
+            <th>Modifier</th>
+            <th>Create time</th>
+            <th>Modified time</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @table_slots) do |table_slot| %>
+            <td><%= table_slot.table_id %></td>
+            <td><%= table_slot.status %></td>
+            <td><%= table_slot.creator_id %></td>
+            <td><%= table_slot.modifier_id %></td>
+            <td><%= table_slot.create_time %></td>
+            <td><%= table_slot.modified_time %></td>
+            <td><%= link_to 'Show', table_slot %></td>
+        <td><%= link_to 'Edit', edit_table_slot_path(table_slot) %></td>
+        <td><%= link_to 'Destroy', table_slot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

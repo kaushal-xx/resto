@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username:
+  password:
+  prepared_statements: false
+
+development:
+  <<: *default
+  database: resto_development
+
+test:
+  <<: *default
+  database: resto_test
+
+staging:
+  <<: *default
+  database: resto_staging
+
+production:
+  <<: *default
+  database: resto_production
+

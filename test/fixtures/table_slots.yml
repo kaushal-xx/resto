@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  table_id: 1
+  status: 1
+  creator_id: 1
+  modifier_id: 1
+  create_time: 2019-04-25 22:37:44
+  modified_time: 2019-04-25 22:37:44
+
+two:
+  table_id: 1
+  status: 1
+  creator_id: 1
+  modifier_id: 1
+  create_time: 2019-04-25 22:37:44
+  modified_time: 2019-04-25 22:37:44

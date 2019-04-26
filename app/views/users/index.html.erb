@@ -1,0 +1,55 @@
+<div class="page-header">
+  <%= link_to new_user_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New User
+  <% end %>
+  <h1>Listing users</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Uuid</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Type</th>
+            <th>Photo</th>
+            <th>Gender</th>
+            <th>Fcm token</th>
+            <th>Tc accept</th>
+            <th>Creator</th>
+            <th>Modifier</th>
+            <th>Create time</th>
+            <th>Modified time</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @users) do |user| %>
+            <td><%= user.uuid %></td>
+            <td><%= user.email %></td>
+            <td><%= user.phone %></td>
+            <td><%= user.name %></td>
+            <td><%= user.status %></td>
+            <td><%= user.user_type %></td>
+            <td><%= user.photo %></td>
+            <td><%= user.gender %></td>
+            <td><%= user.fcm_token %></td>
+            <td><%= user.tc_accept %></td>
+            <td><%= user.creator_id %></td>
+            <td><%= user.modifier_id %></td>
+            <td><%= user.create_time %></td>
+            <td><%= user.modified_time %></td>
+            <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

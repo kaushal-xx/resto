@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qr_code: MyString
+  booking_date: 2019-04-25
+  booking_time_from: 2019-04-25 22:33:56
+  booking_time_to: 2019-04-25 22:33:56
+  table_id: 1
+  booking_by: 1
+  status: 1
+  creator_id: 1
+  modifier_id: 1
+  create_time: 2019-04-25 22:33:56
+  modified_time: 2019-04-25 22:33:56
+
+two:
+  qr_code: MyString
+  booking_date: 2019-04-25
+  booking_time_from: 2019-04-25 22:33:56
+  booking_time_to: 2019-04-25 22:33:56
+  table_id: 1
+  booking_by: 1
+  status: 1
+  creator_id: 1
+  modifier_id: 1
+  create_time: 2019-04-25 22:33:56
+  modified_time: 2019-04-25 22:33:56

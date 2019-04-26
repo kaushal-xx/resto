@@ -1,0 +1,41 @@
+<div class="page-header">
+  <%= link_to new_order_billing_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Order billing
+  <% end %>
+  <h1>Listing order_billings</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Order billingscol</th>
+            <th>Billing amount</th>
+            <th>Billing method</th>
+            <th>Billing status</th>
+            <th>Discount</th>
+            <th>Tax</th>
+            <th>Note</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @order_billings) do |order_billing| %>
+            <td><%= order_billing.order_billingscol %></td>
+            <td><%= order_billing.billing_amount %></td>
+            <td><%= order_billing.billing_method %></td>
+            <td><%= order_billing.billing_status %></td>
+            <td><%= order_billing.discount %></td>
+            <td><%= order_billing.tax %></td>
+            <td><%= order_billing.note %></td>
+            <td><%= link_to 'Show', order_billing %></td>
+        <td><%= link_to 'Edit', edit_order_billing_path(order_billing) %></td>
+        <td><%= link_to 'Destroy', order_billing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

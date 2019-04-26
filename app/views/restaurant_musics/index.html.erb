@@ -1,0 +1,45 @@
+<div class="page-header">
+  <%= link_to new_restaurant_music_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Restaurant music
+  <% end %>
+  <h1>Listing restaurant_musics</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Restaurant</th>
+            <th>Music type</th>
+            <th>Status</th>
+            <th>Creator</th>
+            <th>Modifier</th>
+            <th>Create time</th>
+            <th>Modified time</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @restaurant_musics) do |restaurant_music| %>
+            <td><%= restaurant_music.name %></td>
+            <td><%= restaurant_music.description %></td>
+            <td><%= restaurant_music.restaurant_id %></td>
+            <td><%= restaurant_music.music_type %></td>
+            <td><%= restaurant_music.status %></td>
+            <td><%= restaurant_music.creator_id %></td>
+            <td><%= restaurant_music.modifier_id %></td>
+            <td><%= restaurant_music.create_time %></td>
+            <td><%= restaurant_music.modified_time %></td>
+            <td><%= link_to 'Show', restaurant_music %></td>
+        <td><%= link_to 'Edit', edit_restaurant_music_path(restaurant_music) %></td>
+        <td><%= link_to 'Destroy', restaurant_music, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

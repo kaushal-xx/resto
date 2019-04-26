@@ -1,0 +1,41 @@
+<div class="page-header">
+  <%= link_to new_restaurant_menu_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Restaurant menu
+  <% end %>
+  <h1>Listing restaurant_menus</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Restaurant</th>
+            <th>Dish name</th>
+            <th>Dish type</th>
+            <th>Description</th>
+            <th>Dish price</th>
+            <th>Status</th>
+            <th>Image</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @restaurant_menus) do |restaurant_menu| %>
+            <td><%= restaurant_menu.restaurant_id %></td>
+            <td><%= restaurant_menu.dish_name %></td>
+            <td><%= restaurant_menu.dish_type %></td>
+            <td><%= restaurant_menu.description %></td>
+            <td><%= restaurant_menu.dish_price %></td>
+            <td><%= restaurant_menu.status %></td>
+            <td><%= restaurant_menu.image %></td>
+            <td><%= link_to 'Show', restaurant_menu %></td>
+        <td><%= link_to 'Edit', edit_restaurant_menu_path(restaurant_menu) %></td>
+        <td><%= link_to 'Destroy', restaurant_menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

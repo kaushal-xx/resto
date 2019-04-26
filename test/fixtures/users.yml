@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uuid: MyString
+  email: MyString
+  phone: MyString
+  name: MyString
+  status: MyString
+  type: 
+  photo: MyText
+  gender: MyString
+  fcm_token: MyText
+  tc_accept: MyString
+  creator_id: 1
+  modifier_id: 1
+  create_time: 2019-04-26 10:06:38
+  modified_time: 2019-04-26 10:06:38
+
+two:
+  uuid: MyString
+  email: MyString
+  phone: MyString
+  name: MyString
+  status: MyString
+  type: 
+  photo: MyText
+  gender: MyString
+  fcm_token: MyText
+  tc_accept: MyString
+  creator_id: 1
+  modifier_id: 1
+  create_time: 2019-04-26 10:06:38
+  modified_time: 2019-04-26 10:06:38

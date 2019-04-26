@@ -1,0 +1,44 @@
+<div class="page-header">
+  <%= link_to table_videos_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_table_video_path(@table_video), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show table_video</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @table_video.name %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @table_video.description %></dd>
+
+  <dt>Url:</dt>
+  <dd><%= @table_video.url %></dd>
+
+  <dt>Video type:</dt>
+  <dd><%= @table_video.video_type %></dd>
+
+  <dt>Table:</dt>
+  <dd><%= @table_video.table_id %></dd>
+
+  <dt>Status:</dt>
+  <dd><%= @table_video.status %></dd>
+
+  <dt>Creator:</dt>
+  <dd><%= @table_video.creator_id %></dd>
+
+  <dt>Modifier:</dt>
+  <dd><%= @table_video.modifier_id %></dd>
+
+  <dt>Create time:</dt>
+  <dd><%= @table_video.create_time %></dd>
+
+  <dt>Modified time:</dt>
+  <dd><%= @table_video.modified_time %></dd>
+
+</dl>

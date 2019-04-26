@@ -1,0 +1,74 @@
+<%= form_for(@table_booking, html: { class: "form-horizontal", role: "form" }) do |f| %>
+  <% if @table_booking.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@table_booking.errors.count, "error") %> prohibited this table_booking from being saved:</h4>
+
+      <ul>
+      <% @table_booking.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :qr_code, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :qr_code, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :booking_date, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.date_select :booking_date, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :booking_time_from, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.time_select :booking_time_from, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :booking_time_to, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.time_select :booking_time_to, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :table_id, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.select :table_id, RestaurantTable.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :booking_by, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :booking_by, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :status, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :status, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :creator_id, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.select :creator_id, User.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :modifier_id, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.select :modifier_id, User.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

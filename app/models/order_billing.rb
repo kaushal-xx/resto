@@ -1,0 +1,2 @@
+class OrderBilling < ApplicationRecord
+end

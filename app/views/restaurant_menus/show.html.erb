@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to restaurant_menus_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_restaurant_menu_path(@restaurant_menu), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show restaurant_menu</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Restaurant:</dt>
+  <dd><%= @restaurant_menu.restaurant_id %></dd>
+
+  <dt>Dish name:</dt>
+  <dd><%= @restaurant_menu.dish_name %></dd>
+
+  <dt>Dish type:</dt>
+  <dd><%= @restaurant_menu.dish_type %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @restaurant_menu.description %></dd>
+
+  <dt>Dish price:</dt>
+  <dd><%= @restaurant_menu.dish_price %></dd>
+
+  <dt>Status:</dt>
+  <dd><%= @restaurant_menu.status %></dd>
+
+  <dt>Image:</dt>
+  <dd><%= @restaurant_menu.image %></dd>
+
+</dl>

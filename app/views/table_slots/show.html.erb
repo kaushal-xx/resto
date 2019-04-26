@@ -1,0 +1,32 @@
+<div class="page-header">
+  <%= link_to table_slots_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_table_slot_path(@table_slot), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show table_slot</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Table:</dt>
+  <dd><%= @table_slot.table_id %></dd>
+
+  <dt>Status:</dt>
+  <dd><%= @table_slot.status %></dd>
+
+  <dt>Creator:</dt>
+  <dd><%= @table_slot.creator_id %></dd>
+
+  <dt>Modifier:</dt>
+  <dd><%= @table_slot.modifier_id %></dd>
+
+  <dt>Create time:</dt>
+  <dd><%= @table_slot.create_time %></dd>
+
+  <dt>Modified time:</dt>
+  <dd><%= @table_slot.modified_time %></dd>
+
+</dl>

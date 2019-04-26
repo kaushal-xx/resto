@@ -1,0 +1,2 @@
+module TableOcassionsHelper
+end

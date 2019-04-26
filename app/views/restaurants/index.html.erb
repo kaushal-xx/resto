@@ -1,0 +1,51 @@
+<div class="page-header">
+  <%= link_to new_restaurant_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Restaurant
+  <% end %>
+  <h1>Listing restaurants</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>User</th>
+            <th>Name</th>
+            <th>Brand logo url</th>
+            <th>Description</th>
+            <th>Owner name</th>
+            <th>Owner contact no</th>
+            <th>Owner address</th>
+            <th>Status</th>
+            <th>Creator</th>
+            <th>Modifier</th>
+            <th>Create time</th>
+            <th>Modified time</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @restaurants) do |restaurant| %>
+            <td><%= restaurant.user_id %></td>
+            <td><%= restaurant.name %></td>
+            <td><%= restaurant.brand_logo_url %></td>
+            <td><%= restaurant.description %></td>
+            <td><%= restaurant.owner_name %></td>
+            <td><%= restaurant.owner_contact_no %></td>
+            <td><%= restaurant.owner_address %></td>
+            <td><%= restaurant.status %></td>
+            <td><%= restaurant.creator_id %></td>
+            <td><%= restaurant.modifier_id %></td>
+            <td><%= restaurant.create_time %></td>
+            <td><%= restaurant.modified_time %></td>
+            <td><%= link_to 'Show', restaurant %></td>
+        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

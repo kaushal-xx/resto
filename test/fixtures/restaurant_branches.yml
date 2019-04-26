@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  brand_logo_url: MyText
+  phone: MyString
+  email: MyString
+  restaurant_id: 1
+  location_id: 1
+  status: MyString
+  creator_id: 1
+  modifier_id: 1
+  create_time: 2019-04-25 22:04:14
+  modified_time: 2019-04-25 22:04:14
+
+two:
+  name: MyString
+  description: MyText
+  brand_logo_url: MyText
+  phone: MyString
+  email: MyString
+  restaurant_id: 1
+  location_id: 1
+  status: MyString
+  creator_id: 1
+  modifier_id: 1
+  create_time: 2019-04-25 22:04:14
+  modified_time: 2019-04-25 22:04:14

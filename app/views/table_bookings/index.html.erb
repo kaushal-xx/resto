@@ -1,0 +1,49 @@
+<div class="page-header">
+  <%= link_to new_table_booking_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Table booking
+  <% end %>
+  <h1>Listing table_bookings</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Qr code</th>
+            <th>Booking date</th>
+            <th>Booking time from</th>
+            <th>Booking time to</th>
+            <th>Table</th>
+            <th>Booking by</th>
+            <th>Status</th>
+            <th>Creator</th>
+            <th>Modifier</th>
+            <th>Create time</th>
+            <th>Modified time</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @table_bookings) do |table_booking| %>
+            <td><%= table_booking.qr_code %></td>
+            <td><%= table_booking.booking_date %></td>
+            <td><%= table_booking.booking_time_from %></td>
+            <td><%= table_booking.booking_time_to %></td>
+            <td><%= table_booking.table_id %></td>
+            <td><%= table_booking.booking_by %></td>
+            <td><%= table_booking.status %></td>
+            <td><%= table_booking.creator_id %></td>
+            <td><%= table_booking.modifier_id %></td>
+            <td><%= table_booking.create_time %></td>
+            <td><%= table_booking.modified_time %></td>
+            <td><%= link_to 'Show', table_booking %></td>
+        <td><%= link_to 'Edit', edit_table_booking_path(table_booking) %></td>
+        <td><%= link_to 'Destroy', table_booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

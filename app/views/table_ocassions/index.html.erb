@@ -1,0 +1,47 @@
+<div class="page-header">
+  <%= link_to new_table_ocassion_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Table ocassion
+  <% end %>
+  <h1>Listing table_ocassions</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Table</th>
+            <th>Ocassion type</th>
+            <th>Booking by</th>
+            <th>Status</th>
+            <th>Creator</th>
+            <th>Modifier</th>
+            <th>Create time</th>
+            <th>Modified time</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @table_ocassions) do |table_ocassion| %>
+            <td><%= table_ocassion.name %></td>
+            <td><%= table_ocassion.description %></td>
+            <td><%= table_ocassion.table_id %></td>
+            <td><%= table_ocassion.ocassion_type %></td>
+            <td><%= table_ocassion.booking_by %></td>
+            <td><%= table_ocassion.status %></td>
+            <td><%= table_ocassion.creator_id %></td>
+            <td><%= table_ocassion.modifier_id %></td>
+            <td><%= table_ocassion.create_time %></td>
+            <td><%= table_ocassion.modified_time %></td>
+            <td><%= link_to 'Show', table_ocassion %></td>
+        <td><%= link_to 'Edit', edit_table_ocassion_path(table_ocassion) %></td>
+        <td><%= link_to 'Destroy', table_ocassion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  restaurant_id: 1
+  music_type: MyString
+  status: 1
+  creator_id: 1
+  modifier_id: 1
+  create_time: 2019-04-25 22:25:33
+  modified_time: 2019-04-25 22:25:33
+
+two:
+  name: MyString
+  description: MyText
+  restaurant_id: 1
+  music_type: MyString
+  status: 1
+  creator_id: 1
+  modifier_id: 1
+  create_time: 2019-04-25 22:25:33
+  modified_time: 2019-04-25 22:25:33

@@ -1,0 +1,2 @@
+module RestaurantPhotosHelper
+end

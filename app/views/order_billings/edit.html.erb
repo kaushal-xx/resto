@@ -1,0 +1,13 @@
+<div class="page-header">
+  <%= link_to order_billings_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to @order_billing, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Show
+  <% end %>
+  <h1>Editing order_billing</h1>
+</div>
+
+<%= render 'form' %>

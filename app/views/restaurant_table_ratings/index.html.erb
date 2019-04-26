@@ -1,0 +1,45 @@
+<div class="page-header">
+  <%= link_to new_restaurant_table_rating_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Restaurant table rating
+  <% end %>
+  <h1>Listing restaurant_table_ratings</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>From user</th>
+            <th>Review</th>
+            <th>Table</th>
+            <th>Rating</th>
+            <th>Status</th>
+            <th>Creator</th>
+            <th>Modifier</th>
+            <th>Create time</th>
+            <th>Modified time</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @restaurant_table_ratings) do |restaurant_table_rating| %>
+            <td><%= restaurant_table_rating.from_user_id %></td>
+            <td><%= restaurant_table_rating.review %></td>
+            <td><%= restaurant_table_rating.table_id %></td>
+            <td><%= restaurant_table_rating.rating %></td>
+            <td><%= restaurant_table_rating.status %></td>
+            <td><%= restaurant_table_rating.creator_id %></td>
+            <td><%= restaurant_table_rating.modifier_id %></td>
+            <td><%= restaurant_table_rating.create_time %></td>
+            <td><%= restaurant_table_rating.modified_time %></td>
+            <td><%= link_to 'Show', restaurant_table_rating %></td>
+        <td><%= link_to 'Edit', edit_restaurant_table_rating_path(restaurant_table_rating) %></td>
+        <td><%= link_to 'Destroy', restaurant_table_rating, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

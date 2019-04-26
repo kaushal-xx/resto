@@ -1,0 +1,2 @@
+module TableSlotsHelper
+end

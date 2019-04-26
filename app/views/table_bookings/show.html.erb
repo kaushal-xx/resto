@@ -1,0 +1,47 @@
+<div class="page-header">
+  <%= link_to table_bookings_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_table_booking_path(@table_booking), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show table_booking</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Qr code:</dt>
+  <dd><%= @table_booking.qr_code %></dd>
+
+  <dt>Booking date:</dt>
+  <dd><%= @table_booking.booking_date %></dd>
+
+  <dt>Booking time from:</dt>
+  <dd><%= @table_booking.booking_time_from %></dd>
+
+  <dt>Booking time to:</dt>
+  <dd><%= @table_booking.booking_time_to %></dd>
+
+  <dt>Table:</dt>
+  <dd><%= @table_booking.table_id %></dd>
+
+  <dt>Booking by:</dt>
+  <dd><%= @table_booking.booking_by %></dd>
+
+  <dt>Status:</dt>
+  <dd><%= @table_booking.status %></dd>
+
+  <dt>Creator:</dt>
+  <dd><%= @table_booking.creator_id %></dd>
+
+  <dt>Modifier:</dt>
+  <dd><%= @table_booking.modifier_id %></dd>
+
+  <dt>Create time:</dt>
+  <dd><%= @table_booking.create_time %></dd>
+
+  <dt>Modified time:</dt>
+  <dd><%= @table_booking.modified_time %></dd>
+
+</dl>
